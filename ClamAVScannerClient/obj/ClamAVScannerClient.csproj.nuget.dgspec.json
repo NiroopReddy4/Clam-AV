@@ -1,0 +1,65 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Niroop\\ClamAV\\ClamAVScannerConsoleApp\\ClamAVScannerClient\\ClamAVScannerClient.csproj": {}
+  },
+  "projects": {
+    "D:\\Niroop\\ClamAV\\ClamAVScannerConsoleApp\\ClamAVScannerClient\\ClamAVScannerClient.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Niroop\\ClamAV\\ClamAVScannerConsoleApp\\ClamAVScannerClient\\ClamAVScannerClient.csproj",
+        "projectName": "ClamAVScannerClient",
+        "projectPath": "D:\\Niroop\\ClamAV\\ClamAVScannerConsoleApp\\ClamAVScannerClient\\ClamAVScannerClient.csproj",
+        "packagesPath": "C:\\Users\\Niroop Reddy\\.nuget\\packages\\",
+        "outputPath": "D:\\Niroop\\ClamAV\\ClamAVScannerConsoleApp\\ClamAVScannerClient\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Niroop Reddy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://tfs-pcc-store.devtest.emishosting.com/nuget": {},
+          "https://www.nuget.org/api/v2/": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "nClam": {
+              "target": "Package",
+              "version": "[4.0.1, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

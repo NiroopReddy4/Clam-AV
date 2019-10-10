@@ -1,0 +1,41 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.2",
+    "signature": "36b957194e52a2d30f5b96ee514df91764120530"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.2": {
+      "ClamAVScannerClient/1.0.0": {
+        "dependencies": {
+          "nClam": "4.0.1"
+        },
+        "runtime": {
+          "ClamAVScannerClient.dll": {}
+        }
+      },
+      "nClam/4.0.1": {
+        "runtime": {
+          "lib/netstandard2.0/nClam.dll": {
+            "assemblyVersion": "4.0.1.0",
+            "fileVersion": "4.0.1.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ClamAVScannerClient/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "nClam/4.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-c3ZGzpL5j1SJr8HTwXPCabfcKxz3OvbPHrQKp2m67V8U5gy/b+zNfpbfDSvNAdW5uQ8nsS8e1aNlphj5VyXbVA==",
+      "path": "nclam/4.0.1",
+      "hashPath": "nclam.4.0.1.nupkg.sha512"
+    }
+  }
+}

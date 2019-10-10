@@ -1,0 +1,11 @@
+D:\Niroop\ClamAV\ClamAVScannerConsoleApp\ClamAVScannerClient\obj\Debug\netcoreapp2.2\ClamAVScannerClient.csprojAssemblyReference.cache
+D:\Niroop\ClamAV\ClamAVScannerConsoleApp\ClamAVScannerClient\obj\Debug\netcoreapp2.2\ClamAVScannerClient.csproj.CoreCompileInputs.cache
+D:\Niroop\ClamAV\ClamAVScannerConsoleApp\ClamAVScannerClient\obj\Debug\netcoreapp2.2\ClamAVScannerClient.AssemblyInfoInputs.cache
+D:\Niroop\ClamAV\ClamAVScannerConsoleApp\ClamAVScannerClient\obj\Debug\netcoreapp2.2\ClamAVScannerClient.AssemblyInfo.cs
+D:\Niroop\ClamAV\ClamAVScannerConsoleApp\ClamAVScannerClient\bin\Debug\netcoreapp2.2\ClamAVScannerClient.deps.json
+D:\Niroop\ClamAV\ClamAVScannerConsoleApp\ClamAVScannerClient\bin\Debug\netcoreapp2.2\ClamAVScannerClient.runtimeconfig.json
+D:\Niroop\ClamAV\ClamAVScannerConsoleApp\ClamAVScannerClient\bin\Debug\netcoreapp2.2\ClamAVScannerClient.runtimeconfig.dev.json
+D:\Niroop\ClamAV\ClamAVScannerConsoleApp\ClamAVScannerClient\bin\Debug\netcoreapp2.2\ClamAVScannerClient.dll
+D:\Niroop\ClamAV\ClamAVScannerConsoleApp\ClamAVScannerClient\bin\Debug\netcoreapp2.2\ClamAVScannerClient.pdb
+D:\Niroop\ClamAV\ClamAVScannerConsoleApp\ClamAVScannerClient\obj\Debug\netcoreapp2.2\ClamAVScannerClient.dll
+D:\Niroop\ClamAV\ClamAVScannerConsoleApp\ClamAVScannerClient\obj\Debug\netcoreapp2.2\ClamAVScannerClient.pdb
