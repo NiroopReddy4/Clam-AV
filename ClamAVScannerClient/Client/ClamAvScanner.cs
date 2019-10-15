@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net;
+using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 using ClamAVScannerClient.Classes;
@@ -20,33 +22,68 @@ namespace ClamAVScannerClient.Client
 			{
 				if (_clamAvClient == null)
 				{
-					lock(lockObject)
-						return _clamAvClient ?? (_clamAvClient = new ClamClient(server:"http://192.168.99.100"));
+					lock (lockObject)
+					{
+						//Telnet Start
+						string error = string.Empty;
+						try
+						{
+							//return _clamAvClient ?? (_clamAvClient = new ClamClient(server: "127.0.0.1", port:3310));
+							return _clamAvClient ?? (_clamAvClient = new ClamClient(server: "192.168.99.100", port: 3310));
+						}
+						catch (Exception ex)
+						{
+							error = ex.ToString();
+						}
+
+					}
 				}
 
 				return _clamAvClient;
 			}
 		}
-		
-		public ScanResult ScanBytes(byte[] bytes)
+
+		//public static void Connect3(string host, int port)
+		//{
+		//	try
+		//	{
+		//		Socket s = new Socket(AddressFamily.InterNetwork,
+		//			SocketType.Stream,
+		//			ProtocolType.Tcp);
+
+		//		Console.WriteLine("Establishing Connection to {0}",
+		//			host);
+		//		s.Connect(host, port);
+		//		Console.WriteLine("Connection established");
+		//	}
+		//	catch (Exception ex)
+		//	{
+		//		Console.WriteLine(ex.ToString());
+		//	}
+		//}
+		public async Task<ScanResult> ScanBytes(byte[] bytes)
 		{
-			return MapScanResult(ClamAvClient.SendAndScanFileAsync(bytes));
+			//Connect3("http://192.168.99.100", 3310);
+			var scanResult = await ClamAvClient.SendAndScanFileAsync(bytes);
+			var result = MapScanResult(scanResult);
+			return result;
 		}
 
-		public ScanResult ScanFile(string filePath)
+		public async Task<ScanResult> ScanFile(string filePath)
 		{
-			return MapScanResult(ClamAvClient.ScanFileOnServerAsync(filePath));
+			return MapScanResult(await ClamAvClient.ScanFileOnServerAsync(filePath));
 		}
 
-		public ScanResult ScanStream(Stream stream)
+		public async Task<ScanResult> ScanStream(Stream stream)
 		{
-			return MapScanResult(ClamAvClient.SendAndScanFileAsync(stream));
+			return MapScanResult(await ClamAvClient.SendAndScanFileAsync(stream));
 		}
 
-		private ScanResult MapScanResult(Task<ClamScanResult> clamAvScanResult)
+		private ScanResult MapScanResult(ClamScanResult clamAvScanResult)
 		{
+			var status = clamAvScanResult.Result;
 			var result = new ScanResult();
-			switch (clamAvScanResult.Result.Result)
+			switch (clamAvScanResult.Result)
 			{
 				case ClamScanResults.Unknown:
 					result.Message = "Could Not Scan File";
@@ -57,11 +94,11 @@ namespace ClamAVScannerClient.Client
 					result.IsVirusFree = true;
 					break;
 				case ClamScanResults.VirusDetected:
-					result.Message = "Virus Found " + clamAvScanResult.Result.InfectedFiles.FirstOrDefault().VirusName;
+					result.Message = "Virus Found " + clamAvScanResult.InfectedFiles.FirstOrDefault().VirusName;
 					result.IsVirusFree = false;
 					break;
 				case ClamScanResults.Error:
-					result.Message = string.Format("Virus Scan Error! {0}", clamAvScanResult.Result.RawResult);
+					result.Message = string.Format("Virus Scan Error! {0}", clamAvScanResult.RawResult);
 					result.IsVirusFree = false;
 					break;
 				default:

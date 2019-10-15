@@ -26,6 +26,7 @@
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "http://tfs-pcc-store.devtest.emishosting.com/nuget": {},
+          "https://pkgs.dev.azure.com/emisgroup/_packaging/emisgroup/nuget/v3/index.json": {},
           "https://www.nuget.org/api/v2/": {}
         },
         "frameworks": {

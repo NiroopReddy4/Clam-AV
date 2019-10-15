@@ -1,0 +1,13 @@
+.vs/ClamAVScannerConsoleApp/v16/.suo
+.vs/*
+.vs/ClamAVScannerConsoleApp/v16/Server/sqlite3/storage.ide-shm
+.vs/ClamAVScannerConsoleApp/v16/Server/sqlite3/storage.ide-wal
+ClamAVScannerClient/bin/Debug/netcoreapp2.2/ClamAVScannerClient.pdb
+ClamAVScannerClient/bin/Debug/netcoreapp2.2/ClamAVScannerClient.dll
+ClamAVScannerClient/obj/ClamAVScannerClient.csproj.nuget.cache
+.vs/ClamAVScannerConsoleApp/v16/.suo
+ClamAVScannerClient/obj/Debug/netcoreapp2.2/ClamAVScannerClient.assets.cache
+ClamAVScannerClient/obj/Debug/netcoreapp2.2/ClamAVScannerClient.csprojAssemblyReference.cache
+ClamAVScannerClient/obj/Debug/netcoreapp2.2/ClamAVScannerClient.dll
+ClamAVScannerClient/obj/Debug/netcoreapp2.2/ClamAVScannerClient.pdb
+.vs/ClamAVScannerConsoleApp/v16/.suo

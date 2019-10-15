@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  clamav:
+    image: crobox/clamav:latest
+    network_mode: "bridge"
+    ports:
+      - "3310:3310"
+    volumes:
+      - ./data:/data
